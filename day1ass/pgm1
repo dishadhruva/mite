@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    int orderstatus;
+    printf("enter orderstatus(1/2/3/4):");
+    scanf("%d",&orderstatus);
+    switch(orderstatus)
+    {
+        case 1:printf("your order is placed\n");
+        break;
+        case 2:printf("your food is being prepared\n");
+        break;
+        case 3:printf("your order is out for delivery\n");
+        break;
+        case 4:printf("your order has been delivered\n");
+        break;
+        default:printf("invalid status.please enter a number between 1 and 4.");
+        break;
+    }
+    return 0;
+}
