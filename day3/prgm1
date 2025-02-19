@@ -1,0 +1,29 @@
+#include<stdio.h>
+void displayages(short int *ages,int length,int index)
+{
+    if(index>=length)
+    {
+        return;
+    }
+    printf("%d\t",ages[index]);
+    displayages(ages,5,index+1);
+}
+
+void travelbackwardages(short int *ages,int length,int index)
+{
+    if(index>=length)
+    {
+        return;
+    }
+    travelbackwardages(ages,5,index+1);
+    printf("%d\t",ages[index]);
+}
+
+int main()
+{
+    short int ages[]={45,42,14,20,70};
+    displayages(ages,5,0);
+    printf("\n");
+    travelbackwardages(ages,5,0);
+    return 0;
+}
