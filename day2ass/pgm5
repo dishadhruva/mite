@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+
+    char (*names)[50] = malloc(n * 50 * sizeof(char));
+    int *marks = malloc(n * sizeof(int));
+
+    for (int i = 0; i < n; i++) {
+        printf("Enter Student %d Name: ", i + 1);
+        scanf("%s", names[i]);
+        printf("Enter Marks: ");
+        scanf("%d", &marks[i]);
+    }
+
+    printf("\nStudent Records:\n");
+    for (int i = 0; i < n; i++) {
+        printf("%s - %d\n", names[i], marks[i]);
+    }
+
+    free(names);
+    free(marks);
+
+    return 0;
+}
